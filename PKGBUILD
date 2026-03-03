@@ -3,7 +3,7 @@
 pkgname_=WaveLogGoat
 pkgname=waveloggoat
 pkgver=0.0.5
-pkgrel=1
+pkgrel=2
 pkgdesc='Go PKGBUILD Example'
 arch=('x86_64')
 url="https://github.com/johnsonm/$pkgname_"
@@ -26,7 +26,7 @@ build() {
 	#export CGO_LDeeFLAGS="${LDFLAGS}"
 	#export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
 	go mod tidy
-	go build -o "$pkgname"
+	go build  -buildvcs=false  -o "$pkgname"
 }
 
 check() {
